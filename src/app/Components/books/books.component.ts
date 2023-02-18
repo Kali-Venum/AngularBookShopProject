@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Book } from 'src/app/Models/Book.model';
 
 @Component({
@@ -6,7 +6,14 @@ import { Book } from 'src/app/Models/Book.model';
   templateUrl: './books.component.html',
   styleUrls: ['./books.component.css'],
 })
-export class BooksComponent {
+export class BooksComponent implements OnInit {
+
+  constructor() {}
+
+  ngOnInit(): void {
+    throw new Error('Method not implemented.');
+  }
+
   books: Book[] = [
     {
       image: 'https://m.media-amazon.com/images/I/51Do0NLYmDL._SX258_BO1,204,203,200_.jpg',
