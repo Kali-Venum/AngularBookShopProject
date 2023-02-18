@@ -1,6 +1,7 @@
 {
   "name": "angular-book-shop-project",
   "version": "0.0.0",
+  "author": "Subham Das",
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
