@@ -1,8 +1,8 @@
 <li class="book">
-    <img [src]="singleBook.image" [alt]="singleBook.name" width="100" />
-    <p class="title">
-      {{ singleBook.name | titlecase }} by {{ singleBook.author | titlecase }}
-    </p>
-    <p class="price">{{ singleBook.price | currency : "INR" }}</p>
-    <button>Add to cart</button>
-  </li>
+  <img [src]="singleBook.image" [alt]="singleBook.name" width="100" />
+  <p class="title">
+    {{ singleBook.name | titlecase }} by {{ singleBook.author | titlecase }}
+  </p>
+  <p class="price">{{ singleBook.price | currency : "INR" }}</p>
+  <button (click)="addToCart()">Add to cart</button>
+</li>
