@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Book } from 'src/app/Models/Book.model';
+import { BooksService } from './books.service';
 
 @Component({
   selector: 'app-books',
@@ -8,26 +9,13 @@ import { Book } from 'src/app/Models/Book.model';
 })
 export class BooksComponent implements OnInit {
 
-  constructor() {}
+  constructor(private booksService: BooksService) {}
 
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    this.books = this.booksService.getBooks();
   }
 
-  books: Book[] = [
-    {
-      image: 'https://m.media-amazon.com/images/I/51Do0NLYmDL._SX258_BO1,204,203,200_.jpg',
-      name: "World's Greatest Books For Personal Growth & Wealth",
-      author: 'Dale Carnegie',
-      price: 100
-    },
-    {
-      image: 'https://m.media-amazon.com/images/I/41RwQlo446L._SX329_BO1,204,203,200_.jpg',
-      name: "Energize Your Mind",
-      author: 'Gaur Gopal Das',
-      price: 200
-    },
-  ];
+  books: Book[] = [];
 
   cart: Book[] = [];
 
