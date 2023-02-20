@@ -4,5 +4,6 @@
     {{ singleBook.name | titlecase }} by {{ singleBook.author | titlecase }}
   </p>
   <p class="price">{{ singleBook.price | currency : "INR" }}</p>
-  <button (click)="addToCart()">Add to cart</button>
+  <button *ngIf="!isInCart" (click)="addToCart()">Add to cart</button>
+  <button *ngIf="isInCart" (click)="removeFromCart()">Remove from cart</button>
 </li>

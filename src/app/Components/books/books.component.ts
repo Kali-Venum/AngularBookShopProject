@@ -8,7 +8,6 @@ import { BooksService } from './books.service';
   styleUrls: ['./books.component.css'],
 })
 export class BooksComponent implements OnInit {
-
   constructor(private booksService: BooksService) {}
 
   ngOnInit(): void {
@@ -16,10 +15,4 @@ export class BooksComponent implements OnInit {
   }
 
   books: Book[] = [];
-
-  cart: Book[] = [];
-
-  addToCart(event: Book) {
-    console.log(event)
-  }
 }
